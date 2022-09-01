@@ -1,0 +1,49 @@
+<template>
+    <div data-id="curtainModal" id="curtainModal" class="overlay">
+      <lightning-button-icon
+        icon-name="utility:close"
+        variant="bare-inverse"
+        class="closebtn"
+        onclick={closeModal}
+        size="large"
+      ></lightning-button-icon>
+      <div class="overlay-content">
+        <section
+          role="dialog"
+          tabindex="-1"
+          aria-labelledby="modal-heading-01"
+          aria-modal="true"
+          aria-describedby="modal-content-id-1"
+        >
+          <div class="slds-modal__container">
+            <!-- Header Start -->
+            <header class="slds-modal__header">
+              <h2 class="slds-text-heading_medium slds-hyphenate header-string">
+                Curtain Modal Popup :basicConcepts
+              </h2>
+            </header>
+            <!-- Header End -->
+            <div
+              class="slds-modal__content slds-p-around_medium"
+              id="modal-content-id-1"
+            >
+              <slot>
+                <p>This is a curtain modal popup component.</p>
+              </slot>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+    <lightning-card title="Curtain Modal" icon-name="utility:user">
+      <div class="slds-var-m-around_medium">
+        <lightning-button
+          variant="brand"
+          label=" Show Curtain Modal"
+          title=" Show Curtain Modal"
+          onclick={handleShowModal}
+          class="slds-m-left_x-small"
+        ></lightning-button>
+      </div>
+    </lightning-card>
+  </template>
