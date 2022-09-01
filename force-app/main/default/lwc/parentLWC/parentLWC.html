@@ -1,0 +1,70 @@
+<!-- sldsValidatorIgnore -->
+<template>
+    <div class="margin-bottom-2rem">
+        <lightning-card title="Calling child method from parent" icon-name="custom:custom14">
+            <div class="slds-m-bottom_x-large">
+    
+                <!-- Input for Contact Name -->
+                <div class="slds-p-around_medium">
+                    <lightning-input type="text" label="Contact Name" placeholder="Enter contact name..."
+                     value={strContactName} onchange={changeName}>
+
+                    </lightning-input>
+                </div>
+        
+                <!-- Button to add contact -->
+                <lightning-button variant="brand" label="Add Contact" title="Add Contact" onclick={addContact} class="slds-p-around_medium"></lightning-button>
+                <!-- Child Component to display list of Contacts-->
+                <div class="slds-m-top_x-medium slds-p-around_medium">
+                    <c-child-l-w-c></c-child-l-w-c>
+                </div>
+            
+            </div>
+        </lightning-card>
+    </div>
+
+    <!--    <div class="margin-bottom-2rem">
+        <lightning-card title="Parent to child data communication using Array/Objects" icon-name="custom:custom14">
+            <div class="slds-container_medium">
+                <c-child-l-w-c user-details={userDetails}></c-child-l-w-c>
+            </div>
+        </lightning-card>
+    </div>
+
+   -->
+
+
+
+ <!-- <lightning-card title="Parent Component">
+    <c-child-l-w-c message="Data send from Parent child"></c-child-l-w-c>
+    </lightning-card>
+-->
+  <!-- <template if:true={selectedPlayer}>
+        <div class="card">
+            <div>
+                <img src={selectedPlayer.imgUrl} alt="Avatar" style="width:100%" />
+            </div>
+            <div class="container">
+                <p><strong>Player Name:</strong> {selectedPlayer.name}</p>
+                <p><strong>Ranking:</strong> {selectedPlayer.position}</p>
+                <p><strong>country:</strong> {selectedPlayer.country}</p>
+                <p><strong>Rating:</strong> {selectedPlayer.rating}</p>
+            </div>
+        </div>
+    </template>-->
+
+  <!--   <lightning-card title="Parent Component">
+        <p class="slds-p-horizontal_small">
+          <lightning-progress-bar value={progressValue} size="large"></lightning-progress-bar>
+          <c-child-l-w-c onprogressvaluechange={hanldeProgressValueChange}></c-child-l-w-c>
+        </p>
+      </lightning-card>-->
+
+ <!-- <lightning-card  title="Parent Component">
+        <div class="slds-text-body_regular">
+            Value entered in Child LWC is <b>{childValue}</b><br/>
+        </div>
+       <br/>
+        <c-child-l-w-c></c-child-l-w-c>
+    </lightning-card>-->
+</template>

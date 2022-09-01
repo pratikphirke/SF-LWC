@@ -1,0 +1,11 @@
+<template>
+    <lightning-card title="Publish Component--using PubSub model">
+
+        <lightning-input  label="Enter Text to Send: " value={strText} 
+            onchange={changeName}></lightning-input>
+        <br/>
+        <lightning-button label="Publish" variant="brand" 
+            onclick={publishEvent}></lightning-button>
+        
+    </lightning-card>
+</template>

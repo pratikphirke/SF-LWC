@@ -1,0 +1,23 @@
+<apex:page >
+    <apex:slds />
+    <script>
+        // Method to publish the message to message Channel
+        function publishMessage(){
+            var textMessageChannel = "{!$MessageChannel.TextMessageChannel__c}";            
+            const objMessage = {
+                "publishedText" : document.querySelector("#idText").value
+            }
+            sforce.one.publish(textMessageChannel, objMessage);
+        }
+    </script>
+    
+    <div class="slds-form-element">
+        <label class="slds-form-element__label" for="form-element-01">Enter Message to Publish:</label>
+        <br/>
+        <div class="slds-form-element__control">
+            <input type="text" id="idText" placeholder="Placeholder Text" class="slds-input"/>
+        </div>
+    </div>
+    <br/>
+    <button class="slds-button slds-button_brand" type="button" onclick="publishMessage()">Publish Message</button>
+</apex:page>

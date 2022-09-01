@@ -1,0 +1,34 @@
+<template>
+    <lightning-card title="Create and View Account Record">
+        <div class="slds-p-horizontal_small">
+        
+      <lightning-record-form 
+             object-api-name={accountObject}
+             record-id={strRecordId}
+             columns="2"
+             mode="edit"
+             fields={arrayFields}
+             onsuccess={handleAccountCreated} >
+    </lightning-record-form>
+        </div>
+    </lightning-card>
+    
+   <lightning-card title="Create Record edit form">
+ <!--To show record edit form-->
+    <lightning-record-edit-form object-api-name={accountObject} onsuccess={handleSuccess}>
+     <lightning-input-field field-name="Name"></lightning-input-field>
+     <lightning-input-field field-name="Phone"></lightning-input-field>
+     <lightning-input-field field-name="Type"></lightning-input-field>
+     <lightning-button type="submit" label="Create Account" variant="brand"></lightning-button>
+     </lightning-record-edit-form>
+    </lightning-card>
+
+    <lightning-card title="Create Record View form">
+      <!-- To view record-->
+      <lightning-record-view-form object-api-name={accountObject}  record-id={accountRecID}>
+        <lightning-output-field field-name="Name"></lightning-output-field>
+        <lightning-output-field field-name="Phone"></lightning-output-field>
+        <lightning-output-field field-name="Type"></lightning-output-field>
+    </lightning-record-view-form>
+</lightning-card>
+</template>

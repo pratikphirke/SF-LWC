@@ -1,0 +1,24 @@
+<aura:component implements="flexipage:availableForAllPageTypes">
+    <aura:attribute name="retrievedMessage" type="String"/>
+    <aura:attribute name="isSubscribed" type="Boolean" default="false"/>
+    <!-- Subscribing to Message Channel-->
+    <lightning:messageChannel type="TextMessageChannel__c" onMessage="{!c.subscribeHandler}"/>
+    <lightning:card title="Aura Component">
+        <lightning:layout>
+            <lightning:layoutItem size="9">
+                <!-- To display the Received Message-->
+                <div>
+                    <p style="font-size:20px;">Received Message: </p> 
+                    <p style="color:green;display:inline;font-weight:bold;font-size:25px;">
+                        {!v.retrievedMessage}
+                    </p>
+                </div>
+            </lightning:layoutItem>
+            <lightning:layoutItem size="3">
+                <lightning:input type="toggle" name="inputSubscribe" checked="default" 
+                onchange="{!c.toggleSubscribe}" messageToggleActive="Subscribed" messageToggleInactive="Unsubscribed"/>
+            </lightning:layoutItem>
+        </lightning:layout>
+        
+    </lightning:card>
+</aura:component>

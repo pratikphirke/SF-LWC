@@ -1,0 +1,15 @@
+<template>
+    <lightning-card  title="Account Records">
+    <div style="height: 300px;">
+        <lightning-datatable
+                key-field="id"
+                show-row-number-column
+                suppress-bottom-bar
+                sorted-by={sortedBy}
+                data={data}
+                columns={columns}
+                onrowaction={handleRowAction}>
+        </lightning-datatable>
+    </div>
+</lightning-card>
+</template>

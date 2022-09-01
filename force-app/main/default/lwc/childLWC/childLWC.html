@@ -1,0 +1,57 @@
+<template>
+    
+
+
+    
+    <lightning-card  title="Child Component">
+        <div class="slds-text-heading_medium">{message}</div>
+    </lightning-card>   
+
+
+
+    <!---
+    <lightning-card  title="Child Component">     
+        <h1 class="slds-text-heading_small">List of Contacts</h1>
+        <div class="slds-p-around_medium">
+            <template for:each={lstContacts} for:item="contact">
+                <p key={contact}>{contact}</p>
+            </template>
+        </div>
+    </lightning-card>
+-->
+    
+
+
+    <!--- <div class="myBar" style={getStyle}>{percentage}</div>
+        <lightning-progress-bar value={percentage} size="large"></lightning-progress-bar>
+    <template for:each={userDetails} for:item="user">
+        <div class="card" key={user.name}>
+            <img src={user.imageUrl} alt={user.name} style="width:100%">
+            <h1>{user.name}</h1>
+            <p class="title">{user.title}</p>
+            <p>{user.company}</p>
+            <p><button>{user.buttontext}</button></p>
+        </div>
+    </template>-->
+
+
+
+     <!--<lightning-card  title="Child Component">
+    <template for:each={navList} for:item="list">
+        <a href="javascript:void(0);" class={list.className} name={list.name} key={list.id}
+            onclick={handleNavSelection}>{list.name}</a>
+    </template>
+</lightning-card>--> 
+
+   <!--  <lightning-card  title="Child Component">
+        <div class="slds-var-p-around_mediumdium">
+        <lightning-input label="Enter a number" onchange={handleChnage} type="number" ></lightning-input> 
+    </div> 
+    </lightning-card>--> 
+
+ <!--  <lightning-card  title="Child Component">
+        <div class="slds-var-p-around_mediumdium">
+       <lightning-input  label="Enter Text" onchange={handleChange}></lightning-input>
+        </div>
+    </lightning-card>--> 
+</template>

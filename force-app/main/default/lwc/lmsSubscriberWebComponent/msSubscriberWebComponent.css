@@ -1,0 +1,6 @@
+img {
+    width:  var(--lwc-varSpacingXSmall, 0.5rem);
+    height:  var(--lwc-varSpacingXSmall, 0.5rem);
+    border-radius: var(--lwc-borderRadiusCircle, 50%)r(--lwc-varSpacingXSmall, 0.5rem);
+    margin-bottom: var(--lwc-varSpacingXSmall, 0.5rem);
+}

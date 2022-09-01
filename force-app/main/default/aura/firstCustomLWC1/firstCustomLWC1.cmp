@@ -1,0 +1,34 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+
+        <p>  <lightning:card title="This My First Custom Component" iconName="custom:custom14" /> </p>
+        <h1 style="color:orange">Header </h1>
+    <br></br>
+    
+    	  <h1><b>Addition of Two Numbers</b></h1>
+    <aura:attribute name="num1" type="integer" default="100"></aura:attribute>
+    <aura:attribute name="num2" type="integer" default="20"></aura:attribute>
+    <aura:attribute name="sum" type="integer"></aura:attribute>
+      
+
+    <lightning:input type="number" name="n1" label="Enter a Number" default="100" />
+    
+    <lightning:select aura:id="id1" label="Select the book" name="book" >
+        <option value="">Choose a book</option>
+        <option value="Book1">Book1</option>
+        <option value="Book2">Book2</option>
+        <option value="Book3">Book3 </option>
+	</lightning:select>
+  
+        <br></br>  
+    <div class="addC">
+            {!v.num1} + {!v.num2} = {!v.sum}
+    </div>
+        <br></br>
+        
+    <p>
+        <ui:button label="Add" press="{!c.add}"></ui:button>
+    </p>
+
+
+    	<h1 style="color:red">Footer</h1>
+</aura:component>

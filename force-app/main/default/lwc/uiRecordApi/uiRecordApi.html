@@ -1,0 +1,27 @@
+<template>
+    <lightning-card title="Search Account Withought Wired Function" icon-name="custom:custom63">
+
+		<div>
+            <lightning-card title="Search Account" icon-name="custom:custom57">
+			<lightning-input type="search" onchange={handleKeyChange} label="Search">
+            </lightning-input>
+			<template if:true={accResult}>
+				<template for:each={accResult} for:item="acc">
+					<lightning-layout vertical-align="center" key={acc.id}>
+						<li>
+							{acc.id}
+							{acc.fields.Name.value}
+						</li>
+					</lightning-layout>
+				</template>
+			</template>
+            <template if:false={accResult}>
+                <p>List View has no data</p>
+            </template>
+        </lightning-card>
+		</div>
+        <lightning-record-view-form object-api-name={Account}  record-id={accId}>
+            <lightning-output-field field-name="Name"></lightning-output-field>
+        </lightning-record-view-form>
+    </lightning-card>
+</template>

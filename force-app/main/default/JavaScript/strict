@@ -1,0 +1,4 @@
+
+'use strict'; // Avoid using variables without the declartaion
+val = 'test';
+console.log(val); // You see error 

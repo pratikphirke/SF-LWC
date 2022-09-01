@@ -1,0 +1,38 @@
+.THIS {
+    background-color: white;
+    font-family:sans-serif;
+    text-align:center;
+}
+ 
+body.THIS {
+    border: 2px solid grey;
+}
+ 
+H1.THIS {
+    background-color: white;
+    font-weight:strong;
+    width: 20%;
+    border: 1px solid green;
+    padding: 10px;
+    font-family:sans-serif;
+    text-align:center;
+    margin:auto;display:block;
+}
+ 
+body.THIS {
+    text-align:center;
+}
+ 
+p.THIS {
+    text-align: center;
+}
+ 
+button.THIS {
+    position: absolute;
+    top: 50%;
+}
+ 
+addC.THIS {
+    margin:auto;
+    display:block;
+}
